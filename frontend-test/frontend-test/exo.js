@@ -55,5 +55,50 @@ class Map {
 
   getColoredMap() {
     // TODO: That's where you work
+    let value = this.generateRandomColor();
+   
+    let arrayOfColor = []
+    arrayOfColor.push(value)
+    console.log('color:', value)
+    let getRow = this.getRawMap()
+
+
+    for(var i =0 ; i<getRow.length; i++) {
+      for(var j=0; j<getRow[i].length; j++) {
+        // check if index i, j is earth by concatinating array with join()
+        if (getRow[i][j].join() === DEFAULT_EARTH_COLOR.join()){
+          // if is earth we need to color the earth point and start check 
+          // the top left bottom and rigth if it's earth
+
+        
+        getRow[i][j] = value
+        //  if (getRow[i+1][j]) {
+
+        //  }
+          
+           
+
+        }
+       
+      }
+
+    }
+    return getRow
   }
+
+  getTopIndexMap(i, j, row) {
+  console.log('j:', j)
+  console.log('i:', i)
+
+  }
+  getBottomIndexMap(i, j, row) {
+
+  }
+  getLeftIndexMap(i, j, row) {
+
+  }
+  getRightIndexMap(i, j, row) {
+
+  }
+
 }
