@@ -69,12 +69,13 @@ class Map {
         if (getRow[i][j].join() === DEFAULT_EARTH_COLOR.join()){
           // if is earth we need to color the earth point and start check 
           // the top left bottom and rigth if it's earth
+          //  will need help to 4 ohter recursive function to get top, rigth, left, and bottom
+          // if it s surround it by water we need change the color 
+          // check if the color al ready exist in the map so we need to keep change it until we get new color not used
 
         
         getRow[i][j] = value
-        //  if (getRow[i+1][j]) {
-
-        //  }
+        this.getTopIndexMap(i, j, getRow, value)
           
            
 
@@ -86,18 +87,18 @@ class Map {
     return getRow
   }
 
-  getTopIndexMap(i, j, row) {
-  console.log('j:', j)
-  console.log('i:', i)
+  getTopIndexMap(i, j, arr) {
+ 
+
 
   }
-  getBottomIndexMap(i, j, row) {
+  getBottomIndexMap(i, j, arr) {
 
   }
-  getLeftIndexMap(i, j, row) {
+  getLeftIndexMap(i, j, arr) {
 
   }
-  getRightIndexMap(i, j, row) {
+  getRightIndexMap(i, j, arr) {
 
   }
 
